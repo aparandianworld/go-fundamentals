@@ -7,6 +7,11 @@ type MyStruct struct {
 	id   int
 }
 
+type Score struct {
+	name  string
+	count int
+}
+
 func main() {
 
 	s1 := MyStruct{
@@ -24,5 +29,19 @@ func main() {
 
 	fmt.Println(s1)
 	fmt.Println(s2)
+
+	students := []string{
+		"Aaron Parandian",
+		"John Doe",
+	}
+
+	scores := []Score{
+		{name: "Aaron Parandian", count: 5},
+		{name: "John Doe", count: 10},
+	}
+
+	fmt.Println("Student scores: ")
+	fmt.Println(students[0], scores[0].count)
+	fmt.Println(students[1], scores[1].count)
 
 }
